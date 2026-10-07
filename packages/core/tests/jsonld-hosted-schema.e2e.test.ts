@@ -190,7 +190,7 @@ describe('JSON-LD W3C credential - student ID card with a schema hosted on a sch
   let verifierAgent: Agent
 
   let issuerHolderConnectionId: string
-  let holderVerifierConnectionId: string
+  let _holderVerifierConnectionId: string
   let verifierHolderConnectionId: string
 
   let issuerDid: string
@@ -211,7 +211,7 @@ describe('JSON-LD W3C credential - student ID card with a schema hosted on a sch
     const [holderVerifierConnection, verifierHolderConnection] = await makeConnection(holderAgent, verifierAgent)
 
     issuerHolderConnectionId = issuerHolderConnection.id
-    holderVerifierConnectionId = holderVerifierConnection.id
+    _holderVerifierConnectionId = holderVerifierConnection.id
     verifierHolderConnectionId = verifierHolderConnection.id
 
     issuerDid = await createEd25519Did(issuerAgent)
